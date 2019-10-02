@@ -43,6 +43,7 @@ body {
 }
 
 .elements h2 {
+	display: inline;
 	margin-top: 2px;
 	padding-top: 10px;
 }
