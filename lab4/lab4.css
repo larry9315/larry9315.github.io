@@ -1,0 +1,111 @@
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+#formDiv {
+	font-family: Impact, Charcoal, sans-serif;
+	width: 60%;
+	margin: 0 auto;
+	border-style: solid;
+	border-color: gray;
+	padding-bottom: 30px;
+	border-radius: 5px;
+}
+
+#formDiv h2 {
+	padding-left: 50px;
+}
+
+#formDiv input#searchBox {
+	float:left;
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 3px;
+	margin-left: 30px;
+}
+
+#buttonInput {
+	margin-left: 10px;
+}
+
+#inputDiv {
+	margin: 0 auto;
+}
+
+#inputDiv .inputDivSearchbox {
+	margin: 0 auto;
+	display: block;
+	border-style: solid;
+	border-color: gray;
+	border-radius: 5px;
+	text-align: center;
+
+}
+
+#inputDiv input {
+	display: block;
+	margin: 0 auto;
+}
+
+#elementDiv {
+	width: 50%;
+	margin: 0 auto;
+	
+}
+
+.elements {
+	line-height: 4px;
+	padding: 10px 10px;
+	border: 1px solid gray;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+.elements:hover {
+	background-color: lightgrey;
+}
+
+.elements h2 {
+	margin-top: 2px;
+	padding-top: 10px;
+}
+
+.elements img {
+	float: left;
+}
+
+div.elements {
+	padding-bottom: 30px;
+}
+
+.elements input {
+	float: right;
+	margin-top: 25px;
+}
+
+.buttonInput {
+	border: none;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	display: inline-block;
+ 	font-size: 15px;
+ 	padding: 5px 5px;
+}
+
+#formDiv .buttonInput {
+	margin-left: 5px;
+}
+
+.elements input {
+	background-color: #f44336;
+ 	border: none;
+ 	color: white;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	display: inline-block;
+ 	font-size: 15px;
+ 	border-radius: 5px;
+}
