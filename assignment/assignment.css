@@ -1,0 +1,57 @@
+#background {
+	margin: 0 auto;
+	background-color: black;
+	width: 390px;
+	transition: all .5s;
+}
+
+#tiles {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*margin: 0 auto;*/
+	display: flex;
+	justify-content: space-between;
+	width: 350px;
+	height: 350px;
+	margin: 0 auto;
+	/*width: 50%;*/
+	/*grid-template-columns: 150px 150px 150px;*/
+	/*grid-column-gap: 1px;*/
+	/*grid-row-gap: 50px;*/
+
+}
+
+
+.writingTile {
+	text-align: center;
+	font-size: 3em;
+	color: white;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.square {
+	display: block;
+	width: 55px;
+	height: 55px;
+	background-color: red;
+	transition: background .5s;
+
+}
+
+.flip {
+	transform: rotateY(180deg);	
+}
+
+.bomb {
+	background-color: white;
+}
+
+#buttonDiv {
+	margin: 50px auto;
+	text-align: center;
+}
