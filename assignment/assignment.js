@@ -53,7 +53,7 @@ function initialize() {
 					scoreHTML.innerHTML = "score: " + score;
 
 					if (score <= 0) {
-					location.href = "summary.html";
+						location.href = "summary.html";
 
 					}
 					else {
@@ -155,6 +155,12 @@ function pickRandomTiles() {
 
 	setTimeout(rotate, 3000);
 		
+}
+
+function terminate() {
+	if (confirm("Are you sure you want to terminate?")) {
+		location.href = "summary.html";
+	}
 }
 
 
