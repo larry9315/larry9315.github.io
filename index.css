@@ -1,0 +1,47 @@
+#navBar {
+	background-color: black;
+	/*opacity: 0.8;*/
+}
+
+#navBar a {
+	color: white;
+}
+
+#titleDiv {
+	margin-left: 10%;
+	margin-top: 200px;
+}
+
+#titleDiv h1 {
+	display: inline-block;
+	font-size: 50px;
+}
+
+#titleDiv h2 {
+	margin-top: 20px;
+}
+
+#cursor {
+	width: 100px;
+	height: 100px;
+	font-size: 50px;
+	background-color: black;  
+
+	animation: blinkingText 1.2s infinite;
+}
+
+#projectDiv {
+	margin-top: 350px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#contactDiv {
+	margin-top: 700px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
