@@ -13,7 +13,6 @@ const appearOnScroll = new IntersectionObserver(
 	function(entries, appearOnScroll) {
 		entries.forEach(entry => {
 			if (!entry.isIntersecting) {
-
 				return;
 			} else {
 				entry.target.classList.add('appear');
@@ -53,3 +52,16 @@ setTimeout(function() {
 blink();
 
 
+$("#projectTab").click(function() {
+	event.preventDefault();
+    $('html,body').animate({
+        scrollTop: $("#section1").offset().top - 100},
+        'slow');
+});
+
+$("#contactTab").click(function() {
+	event.preventDefault();
+    $('html,body').animate({
+        scrollTop: $("#section2").offset().top - 100},
+        'slow');
+});

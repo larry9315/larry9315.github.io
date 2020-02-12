@@ -102,7 +102,7 @@
 
 .fade-in {
 	opacity: 0;
-	transition: opacity 250ms ease-in;
+	transition: opacity 500ms ease-in;
 }
 
 .fade-in.appear {
@@ -120,6 +120,6 @@
 	}
 
 	#projectDiv {
-		margin-top: 1000px;
+		margin-top: 1200px;
 	}
 }

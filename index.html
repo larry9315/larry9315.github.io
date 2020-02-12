@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -23,10 +23,10 @@
 	  <div class="collapse navbar-collapse" id="navbarNav" >
 	    <ul class="navbar-nav ml-auto" id="stripUL">
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Projects</a>
+	        <a class="nav-link" href="#" id="projectTab">Projects</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Contact</a>
+	        <a class="nav-link" href="#" id="contactTab">Contact</a>
 	      </li>
 	    </ul>
 	  </div>
@@ -39,7 +39,7 @@
 </div>
 
 <div id="projectDiv">
-	<h1>Projects</h1>
+	<h1 id="section1">Projects</h1>
     <div class="projectElements fade-in">
         <h3>Easy Grocery</h3>
         <h4>A mobile friendly web application that calculates calories each person needs to stay healthy. The app generates shopping list based on user’s nutritional requirements. We used Firebase for database and Javascript for functionality.</h4>
@@ -51,8 +51,8 @@
         </div>
 
         <div class="btns">
-            <a class="btn btn-primary btnIndividual">Live Demo</a>
-            <a class="btn btn-success btnIndividual">Source Code</a>
+            <a class="btn btn-primary btnIndividual" href="https://easygroce-59546.firebaseapp.com/">Live Demo</a>
+            <a class="btn btn-success btnIndividual" href="https://github.com/pakaratAriya/EasyGrocery">Source Code</a>
         </div>
     </div>
 
@@ -65,8 +65,8 @@
         </div>
 
         <div class="btns">
-            <a class="btn btn-primary btnIndividual">Live Demo</a>
-            <a class="btn btn-success btnIndividual">Source Code</a>
+            <a class="btn btn-primary btnIndividual" href="https://www.youtube.com/watch?v=brUcP2U8Es0">Live Demo</a>
+            <a class="btn btn-success btnIndividual" href="https://github.com/larry9315/Just-Survive">Source Code</a>
         </div>
     </div>
 
@@ -80,8 +80,8 @@
         </div>
 
         <div class="btns">
-            <a class="btn btn-primary btnIndividual">Live Demo</a>
-            <a class="btn btn-success btnIndividual">Source Code</a>
+            <a class="btn btn-primary btnIndividual" href="https://www.youtube.com/watch?v=Qx9iegbjPtc">Live Demo</a>
+            <a class="btn btn-success btnIndividual" href="https://github.com/eamonnalphin/COMP4956PrimaryRepo">Source Code</a>
         </div>
     </div>
 
@@ -92,11 +92,6 @@
             <span class="technology">Unity</span>
             <span class="technology">C#</span>
             <span class="technology">C++</span>
-        </div>
-
-        <div class="btns">
-            <a class="btn btn-primary btnIndividual">Live Demo</a>
-            <a class="btn btn-success btnIndividual">Source Code</a>
         </div>
     </div>
 
@@ -114,14 +109,13 @@
         </div>
 
         <div class="btns">
-            <a class="btn btn-primary btnIndividual">Live Demo</a>
-            <a class="btn btn-success btnIndividual">Source Code</a>
+            <a class="btn btn-success btnIndividual" href="https://github.com/ExtremeSkepticist/CSTTestBank">Source Code</a>
         </div>
     </div>
 </div>
 
 <div id="contactDiv">
-	<h1>Contact</h1>
+	<h1 id="section2">Contact</h1>
 
     <div id="contactInfo">
         <div class="fade-in">
@@ -132,13 +126,13 @@
 
         <div class="fade-in">
             <h1>
-                <a href="">Linkedin</a>
+                <a href="https://www.linkedin.com/in/larry-park/">Linkedin</a>
             </h1>
         </div>
 
         <div class="fade-in">
             <h1>
-                <a href="">Github</a>
+                <a href="https://github.com/larry9315">Github</a>
             </h1>
         </div>
     </div>
