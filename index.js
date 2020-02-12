@@ -1,8 +1,26 @@
 var i = 0;
 var j = 0;
 var name = 'Larry Park';
-var hammad = 'Fuck you Hammad, when are you back? ;)'
 var speed = 100;
+
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = {
+	threshold: 1,
+	rootMargin: "0px 0px -20px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(
+	function(entries, appearOnScroll) {
+		entries.forEach(entry => {
+			if (!entry.isIntersecting) {
+
+				return;
+			} else {
+				entry.target.classList.add('appear');
+				appearOnScroll.unobserve(entry.target);
+			}
+		})
+	}, appearOptions);
 
 function typeWriter(txt) {
   if (i < txt.length) {
@@ -14,15 +32,6 @@ function typeWriter(txt) {
   }
 }
 
-function typeWriter2(txt) {
-  if (j < txt.length) {
-    document.getElementById("temp").innerHTML += txt.charAt(j);
-    j++;
-    setTimeout(function() {
-    	typeWriter2(hammad);
-    }, speed);
-  }
-}
 
 function blink() {
 	var blink = document.getElementById('cursor');
@@ -31,14 +40,16 @@ function blink() {
 	}, 500); 
 }
 
+faders.forEach(fader => {
+	appearOnScroll.observe(fader);
+})
+
 
 setTimeout(function() {
     	typeWriter(name);
     }, 2000);
 
-setTimeout(function() {
-    	typeWriter2(hammad);
-    }, 4000);
-
 
 blink();
+
+

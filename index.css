@@ -1,3 +1,5 @@
+
+
 #navBar {
 	background-color: black;
 	/*opacity: 0.8;*/
@@ -8,7 +10,7 @@
 }
 
 #titleDiv {
-	margin-left: 10%;
+	margin-left: 20%;
 	margin-top: 200px;
 }
 
@@ -22,12 +24,11 @@
 }
 
 #cursor {
-	width: 100px;
-	height: 100px;
+	display: inline-block;
+	width: 20px;
+	height: 70px;
 	font-size: 50px;
 	background-color: black;  
-
-	animation: blinkingText 1.2s infinite;
 }
 
 #projectDiv {
@@ -39,9 +40,71 @@
 }
 
 #contactDiv {
-	margin-top: 700px;
+	margin-top: 400px;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.projectElements {
+	text-align: left;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+	background-color: white;
+	width: 80%;
+	height: 50%;
+	border-radius: 4px;
+
+	/*position: relative;*/
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+	
+	/*-webkit-box-shadow: 0px 0px 48px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 48px 3px rgba(0,0,0,0.75);*/
+	box-shadow: 0px 0px 48px -5px rgba(0,0,0,0.75);
+}
+
+.projectElements h4 {
+	font-size: 15px;
+}
+
+.techDiv {
+	margin-top: 20px;
+}
+
+.technology {
+	text-align: center;
+	display: inline-block;
+	padding: 2px;
+	border: 1px solid green;
+	border-radius: 4px;
+	width: 80px;
+	margin-bottom: 5px;
+}
+
+.btns {
+	color: white;
+	margin-top: 20px;
+}
+
+#contactInfo {
+	margin-top: 100px;
+	height: 350px;
+}
+
+.fade-in {
+	opacity: 0;
+	transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+	opacity: 1;
+}
+
+.fade-in.disappear {
+	opacity: 0;
 }
