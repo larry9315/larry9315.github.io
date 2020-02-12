@@ -113,7 +113,11 @@
 	opacity: 0;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen {
+
+	#navBar a {
+		font-size: 40px;
+	}
 
 	#projectDiv {
 		margin-top: 1000px;
