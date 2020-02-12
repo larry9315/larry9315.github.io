@@ -33,11 +33,7 @@
 	background-color: black;  
 }
 
-@media only screen and (max-width: 600px) {
-	#projectDiv {
-		margin-top: 1000px;
-	}
-}
+
 
 #projectDiv {
 	margin-top: 450px;
@@ -115,4 +111,11 @@
 
 .fade-in.disappear {
 	opacity: 0;
+}
+
+@media only screen and (max-width: 800px) {
+
+	#projectDiv {
+		margin-top: 1000px;
+	}
 }
