@@ -65,3 +65,10 @@ $("#contactTab").click(function() {
         scrollTop: $("#section2").offset().top - 100},
         'slow');
 });
+
+$("#homeTab").click(function() {
+	event.preventDefault();
+    $('html,body').animate({
+        scrollTop: $("body").offset().top - 500},
+        'slow');
+});
