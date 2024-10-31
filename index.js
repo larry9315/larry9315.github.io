@@ -27,23 +27,18 @@ function init() {
 		const titleElement = document.getElementById("title");
 
 		if (!isDeleting && i < txt.length) {
-			// Typing effect
 			titleElement.innerHTML += txt.charAt(i);
 			i++;
 			setTimeout(() => typeWriter(txt), speed);
 		} else if (isDeleting && i > 0) {
-			// Deleting effect
 			titleElement.innerHTML = txt.substring(0, i - 1);
 			i--;
 			setTimeout(() => typeWriter(txt), speed);
 		} else if (i === txt.length) {
-			// Start deleting after typing is complete
 			setTimeout(() => {
 				isDeleting = true;
 				typeWriter(txt);
-			}, 1000); // Delay before deletion
 		} else if (i === 0 && isDeleting) {
-			// Restart typing after deletion is complete
 			isDeleting = false;
 			setTimeout(() => typeWriter(txt), 500);
 		}
