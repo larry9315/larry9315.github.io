@@ -55,10 +55,24 @@ function init() {
 	setTimeout(() => typeWriter(name), 2000);
 	blink();
 
-	$("#projectTab, #contactTab, #homeTab").click(function(event) {
+	$("#projectTab").click(function() {
+	event.preventDefault();
+    $('html,body').animate({
+        scrollTop: $("#section1").offset().top - 100},
+        'slow');
+	});
+
+	$("#contactTab").click(function() {
 		event.preventDefault();
-		const targetId = $(this).attr("href");
-		const offset = $(targetId).offset().top - 100;
-		$('html, body').animate({ scrollTop: offset }, 'slow');
+	    $('html,body').animate({
+	        scrollTop: $("#section2").offset().top - 100},
+	        'slow');
+	});
+
+	$("#homeTab").click(function() {
+		event.preventDefault();
+	    $('html,body').animate({
+	        scrollTop: $("body").offset().top - 500},
+	        'slow');
 	});
 }
