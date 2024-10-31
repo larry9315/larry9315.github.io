@@ -1,76 +1,68 @@
-var i = 0;
-var j = 0;
-var name = 'Larry Park';
-var speed = 100;
+document.addEventListener("DOMContentLoaded", init);
 
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = {
-	threshold: 1,
-	rootMargin: "0px 0px -20px 0px"
-};
+function init() {
+	let i = 0;
+	let isDeleting = false;
+	const name = 'Larry Park';
+	const speed = 100;
 
-const appearOnScroll = new IntersectionObserver(
-	function(entries, appearOnScroll) {
+	const faders = document.querySelectorAll('.fade-in');
+	const appearOptions = {
+		threshold: 1,
+		rootMargin: "0px 0px -20px 0px"
+	};
+
+	const appearOnScroll = new IntersectionObserver((entries, observer) => {
 		entries.forEach(entry => {
-			if (!entry.isIntersecting) {
-				return;
-			} else {
+			if (entry.isIntersecting) {
 				entry.target.classList.add('appear');
-				appearOnScroll.unobserve(entry.target);
+				observer.unobserve(entry.target);
 			}
-		})
+		});
 	}, appearOptions);
 
-function typeWriter(txt) {
-  if (i < txt.length) {
-    document.getElementById("title").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(function() {
-    	typeWriter(name);
-    }, speed);
-  }
+	faders.forEach(fader => appearOnScroll.observe(fader));
+
+	function typeWriter(txt) {
+		const titleElement = document.getElementById("title");
+
+		if (!isDeleting && i < txt.length) {
+			// Typing effect
+			titleElement.innerHTML += txt.charAt(i);
+			i++;
+			setTimeout(() => typeWriter(txt), speed);
+		} else if (isDeleting && i > 0) {
+			// Deleting effect
+			titleElement.innerHTML = txt.substring(0, i - 1);
+			i--;
+			setTimeout(() => typeWriter(txt), speed);
+		} else if (i === txt.length) {
+			// Start deleting after typing is complete
+			setTimeout(() => {
+				isDeleting = true;
+				typeWriter(txt);
+			}, 1000); // Delay before deletion
+		} else if (i === 0 && isDeleting) {
+			// Restart typing after deletion is complete
+			isDeleting = false;
+			setTimeout(() => typeWriter(txt), 500);
+		}
+	}
+
+	function blink() {
+		const blink = document.getElementById('cursor');
+		setInterval(() => {
+			blink.style.opacity = blink.style.opacity === "1" ? "0" : "1";
+		}, 500);
+	}
+
+	setTimeout(() => typeWriter(name), 2000);
+	blink();
+
+	$("#projectTab, #contactTab, #homeTab").click(function(event) {
+		event.preventDefault();
+		const targetId = $(this).attr("href");
+		const offset = $(targetId).offset().top - 100;
+		$('html, body').animate({ scrollTop: offset }, 'slow');
+	});
 }
-
-
-function blink() {
-	var blink = document.getElementById('cursor');
-	setInterval(function() {
-		blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
-	}, 500); 
-}
-
-faders.forEach(fader => {
-	appearOnScroll.observe(fader);
-})
-
-
-setTimeout(function() {
-    	typeWriter(name);
-    }, 2000);
-
-
-blink();
-
-
-$("#projectTab").click(function() {
-	event.preventDefault();
-    $('html,body').animate({
-        scrollTop: $("#section1").offset().top - 100},
-        'slow');
-});
-
-$("#contactTab").click(function() {
-	event.preventDefault();
-    $('html,body').animate({
-        scrollTop: $("#section2").offset().top - 100},
-        'slow');
-});
-
-$("#homeTab").click(function() {
-	event.preventDefault();
-    $('html,body').animate({
-        scrollTop: $("body").offset().top - 500},
-        'slow');
-});
-
-//endofFile
