@@ -38,7 +38,7 @@ function init() {
 			setTimeout(() => {
 				isDeleting = true;
 				typeWriter(txt);
-			}, 3000);
+			}, 2000);
 		} else if (i === 0 && isDeleting) {
 			isDeleting = false;
 			setTimeout(() => typeWriter(txt), 500);
