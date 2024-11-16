@@ -55,19 +55,27 @@ function init() {
 	setTimeout(() => typeWriter(name), 2000);
 	blink();
 
+	$("#experienceTab").click(function() {
+		event.preventDefault();
+		$('html,body').animate({
+				scrollTop: $("#section1").offset().top - 100},
+			'slow');
+	});
+
 	$("#projectTab").click(function() {
 	event.preventDefault();
     $('html,body').animate({
-        scrollTop: $("#section1").offset().top - 100},
+        scrollTop: $("#section2").offset().top - 100},
         'slow');
 	});
 
 	$("#contactTab").click(function() {
 		event.preventDefault();
 	    $('html,body').animate({
-	        scrollTop: $("#section2").offset().top - 100},
+	        scrollTop: $("#section3").offset().top - 100},
 	        'slow');
 	});
+
 
 	$("#homeTab").click(function() {
 		event.preventDefault();
