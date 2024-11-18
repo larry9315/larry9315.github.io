@@ -172,7 +172,7 @@ img {
 @media only screen and (max-device-width: 480px) {
 
 	#titleDiv {
-		margin-top: 400px;
+		margin-top: 200px;
 	}
 
 	#navBar a {
