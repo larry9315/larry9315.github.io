@@ -31,13 +31,27 @@
 	background-color: black;  
 }
 
-.downArrow {
+#downArrow {
 	margin-top: 100px;
 }
 
-.downArrow img{
+#downArrow img{
 	display: block;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -100px;
+	width: 120px;
+}
+
+#upArrow {
+	margin-top: 600px;
+	margin-bottom: -400px;
+}
+
+#upArrow img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	width: 80px;
 }
 
@@ -88,8 +102,10 @@ img {
 	text-align: center;
 }
 
+
+
 #contactDiv {
-	margin-top: 400px;
+	margin-top: 600px;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
@@ -163,6 +179,24 @@ img {
 		font-size: 40px;
 	}
 
+
+	#downArrow img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 200px;
+		width: 150px;
+	}
+
+	#workExperienceDiv h1 {
+		margin-top: 500px;
+		margin-bottom: -20px;
+	}
+
+	.company-header {
+		margin-top: -170px;
+		margin-left: 100px;
+	}
 	#projectDiv {
 		margin-top: 1000px;
 		width: 100%;
