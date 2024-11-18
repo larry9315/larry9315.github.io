@@ -55,7 +55,7 @@ function init() {
 	setTimeout(() => typeWriter(name), 2000);
 	blink();
 
-	$("#experienceTab").click(function() {
+	$(".experienceTab").click(function() {
 		event.preventDefault();
 		$('html,body').animate({
 				scrollTop: $("#section1").offset().top - 100},
@@ -77,7 +77,7 @@ function init() {
 	});
 
 
-	$("#homeTab").click(function() {
+	$(".homeTab").click(function() {
 		event.preventDefault();
 	    $('html,body').animate({
 	        scrollTop: $("body").offset().top - 500},
